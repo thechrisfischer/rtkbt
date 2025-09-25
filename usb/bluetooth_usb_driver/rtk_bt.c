@@ -30,7 +30,7 @@
 #include <linux/usb.h>
 #include <linux/dcache.h>
 #include <net/sock.h>
-#include <asm/unaligned.h>
+#include <linux/unaligned.h>
 
 #include "rtk_bt.h"
 #include "rtk_misc.h"
@@ -134,6 +134,13 @@ static struct usb_device_id btusb_table[] = {
 		.match_flags = USB_DEVICE_ID_MATCH_VENDOR |
 			USB_DEVICE_ID_MATCH_INT_INFO,
 		.idVendor = 0x0cb8,
+		.bInterfaceClass = 0xe0,
+		.bInterfaceSubClass = 0x01,
+		.bInterfaceProtocol = 0x01
+	}, {
+		.match_flags = USB_DEVICE_ID_MATCH_VENDOR |
+			USB_DEVICE_ID_MATCH_INT_INFO,
+		.idVendor = 0x7392,
 		.bInterfaceClass = 0xe0,
 		.bInterfaceSubClass = 0x01,
 		.bInterfaceProtocol = 0x01

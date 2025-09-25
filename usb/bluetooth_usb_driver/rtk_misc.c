@@ -31,7 +31,7 @@
 #include <linux/dcache.h>
 #include <linux/in.h>
 #include <net/sock.h>
-#include <asm/unaligned.h>
+#include <linux/unaligned.h>
 
 #include <linux/interrupt.h>
 #include <linux/module.h>
@@ -301,6 +301,8 @@ static patch_info fw_patch_table[] = {
 	{0xb82c, 0x8822, "mp_rtl8822bu_fw", "rtl8822bu_fw", "rtl8822bu_config", RTL8822BU}, /* RTL8822BU */
 
 	{0xd720, 0x8723, "mp_rtl8723du_fw", "rtl8723du_fw", "rtl8723du_config", RTL8723DU}, /* RTL8723DU */
+	{0xd611, 0x8723, "mp_rtl8723du_fw", "rtl8723du_fw", "rtl8723du_config", RTL8723DU}, /* RTL8723DU Edimax */
+	
 	{0xd723, 0x8723, "mp_rtl8723du_fw", "rtl8723du_fw", "rtl8723du_config", RTL8723DU}, /* RTL8723DU */
 	{0xd739, 0x8723, "mp_rtl8723du_fw", "rtl8723du_fw", "rtl8723du_config", RTL8723DU}, /* RTL8723DU */
 	{0xb009, 0x8723, "mp_rtl8723du_fw", "rtl8723du_fw", "rtl8723du_config", RTL8723DU}, /* RTL8723DU */
